@@ -17,14 +17,14 @@
 <nav>
 <h3>Álvaro Acuña</h3>
 <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Projects</li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#education">Educación</a></li>
+    <li><a href="#proyects">Proyectos</a></li>
 </ul>
 </nav>
 </header>
     <main>
-        <section class="main__Section__Presentation">
+        <section class="main__Section__Presentation" id="home">
             <article class="main__Section__Presentation__Article">
                 <div class="main__Section__Presentation__Article__Container--Title" id="mainTitle">
                    <h2 id="titleNameId">Álvaro Rodrigo Acuña Jiménez</h2>
@@ -84,8 +84,8 @@
                     <img src="./images/logos/mysqlLogo.png" alt="logo mysql">
                 </article>
             </section>
-            <div class="main__Section__Tecnologies__ArticleText">
-                <section class="main__Section__Tecnologies__ArticleText__Container">
+            <section class="main__Section__Tecnologies__ArticleText">
+                <div class="main__Section__Tecnologies__ArticleText__Container">
                     <h2 class="titles">Experiencia</h2>
                     <div class="main__Section__Tecnologies__ArticleText__Container__Content">
                         <div class="main__Section__Tecnologies__ArticleText__Container__Content__scroll">
@@ -159,35 +159,32 @@
                             </article>
                         </div>
                     </div>
-                </section>
-            </div>
-            <section class="main__Section__Education__ArticleText">
+                </div>
+            </section>
+            <section class="main__Section__Education__ArticleText" id="proyects">
                 <div class="main__Section__Education__ArticleText__Container">
                     <h2 class="titles">Proyectos</h2>
-                    <div class="main__Section__Education__ArticleText__Container__ProyectContent">
-                        <div class="main__Section__Education__ArticleText__Container__ProyectContent--BgSquare">
-                            <div class="main__Section__Education__ArticleText__Container__ProyectContent__Carts">
-                                <article class="main__Section__Education__ArticleText__Container__ProyectContent__Carts__item">
-                                    <div class="proyectSection">
-                                        <h2 class="titles">Proyecto freelance</h2>
-                                        <a href="https://tfm-frontend-flame.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="images/tableTopProyect.png" class="ProyectImg"></a>
-                                        <p>Aplicación web que permite crear tablas de ejercicios personalizadas para gimnasio o entrenamiento en casa, potenciadas con inteligencia artificial.</p>
-                                        <ul>
-                                            <li><b>Backend</b> desarrollado en <b>Node.js</b> con arquitectura <b>Modelo-Vista-Controlador</b>, <b>JWT</b> para autenticación, <b>Helmet</b> y <b>CORS</b> para seguridad, 
-                                                <b>WebSockets</b> para comunicación en tiempo real y <b>MongoDB</b> como base de datos. 
-                                                Implementación de <b>CRUD</b> sobre varias colecciones, middlewares y validaciones personalizadas. Gestión de subida de imágenes y despliegue en Render 
-                                                utilizando variables de entorno.</li>
-                                            <li>Frontend en React, empleando <b>React-Redux</b> para el estado global, <b>react-hook-form</b> para formularios, hooks personalizados, Providers y librerías como <b>LazyLoad</b>, <b>Material UI</b> 
-                                                y <b>React Router</b> para el enrutado.</li>
-                                                <li>El sistema genera rutinas dinámicas basadas en objetivos, nivel y equipamiento disponible, ofreciendo una experiencia interactiva y adaptable para el usuario.</li>
-                                        </ul>
-                                        <a href="https://tfm-frontend-flame.vercel.app/" target="_blank" rel="noopener noreferrer"><button class="btn">Ver</button></a>
-                                    </div>
-                                </article>
-                                <article class="main__Section__Education__ArticleText__Container__ProyectContent__Carts__item">
-                                    <div class="proyectSection">
-                                        <h2 class="titles">Taskplanner con websockets</h2>
-                                        <a href="https://taskplannerproevolve.netlify.app/login.html" target="_blank" rel="noopener noreferrer"><img src="images/taskPlannerProyect.png" class="ProyectImg"></a>
+                    <section class="main__Section__Education__ArticleText__Container__ProyectContent">
+                    <button class="arrow left">&#8249;</button>
+                    <div class="carousel-track">
+                        <article class="card" style="background-image:url('images/tableTopProyect.png')">
+                        <a class="proyectSection overlay"  href="https://tfm-frontend-flame.vercel.app/" target="_blank" rel="noopener noreferrer">
+                            <h2 class="titles">Proyecto freelance</h2>
+                                <p>Aplicación web que permite crear tablas de ejercicios personalizadas para gimnasio o entrenamiento en casa, potenciadas con inteligencia artificial.</p>
+                                <ul>
+                                    <li><b>Backend</b> desarrollado en <b>Node.js</b> con arquitectura <b>Modelo-Vista-Controlador</b>, <b>JWT</b> para autenticación, <b>Helmet</b> y <b>CORS</b> para seguridad, 
+                                        <b>WebSockets</b> para comunicación en tiempo real y <b>MongoDB</b> como base de datos. 
+                                        Implementación de <b>CRUD</b> sobre varias colecciones, middlewares y validaciones personalizadas. Gestión de subida de imágenes y despliegue en Render 
+                                        utilizando variables de entorno.</li>
+                                    <li>Frontend en React, empleando <b>React-Redux</b> para el estado global, <b>react-hook-form</b> para formularios, hooks personalizados, Providers y librerías como <b>LazyLoad</b>, <b>Material UI</b> 
+                                        y <b>React Router</b> para el enrutado.</li>
+                                        <li>El sistema genera rutinas dinámicas basadas en objetivos, nivel y equipamiento disponible, ofreciendo una experiencia interactiva y adaptable para el usuario.</li>
+                                </ul>
+                            </a>                    
+                        </article>
+                        <article class="card" style="background-image:url('images/taskPlannerProyect.png')">
+                        <a class="proyectSection overlay" href="https://taskplannerproevolve.netlify.app/login.html" target="_blank" rel="noopener noreferrer">
+                            <h2 class="titles">Taskplanner con websockets</h2>
                                         <p>Aplicación web para la gestión de tareas que permite visualizar y organizar actividades en diferentes estados: pendientes, en progreso, finalizadas y no iniciadas.</p>
                                         <ul>
                                             <li>Backend desarrollado en <b>Node.js</b> con <b>WebSockets</b> para comunicación en tiempo real. 
@@ -198,13 +195,11 @@
                                                 La interfaz presenta un tablero que clasifica las tareas por estado y muestra eventos creados por usuarios junto con su nombre y foto de perfil.</li>
                                             <li>El sistema permite que ciertos roles puedan crear eventos visibles para toda la comunidad, fomentando la colaboración y manteniendo la información sincronizada en tiempo real.</li>
                                         </ul>
-                                        <a href="https://taskplannerproevolve.netlify.app/login.html" target="_blank" rel="noopener noreferrer"><button class="btn">Ver</button></a>
-                                    </div>
-                                </article>
-                                <article class="main__Section__Education__ArticleText__Container__ProyectContent__Carts__item">
-                                    <div class="proyectSection">
-                                        <h2 class="titles">Proyecto pokemon API externa</h2>
-                                        <a href="https://pokemonsmoves.netlify.app/" target="_blank" rel="noopener noreferrer"><img src="images/pokemonProyect.png" class="ProyectImg"></a>
+                        </a>
+                        </article>
+                        <article class="card" style="background-image:url('images/pokemonProyect.png')">
+                        <a class="proyectSection overlay" href="https://pokemonsmoves.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <h2 class="titles">Proyecto pokemon API externa</h2>
                                         <p>Aplicación web que realiza diferentes tipos de peticiones a la PokéAPI para mostrar información de forma dinámica y filtrada.</p>
                                         <ul>
                                             <li>Frontend desarrollado con HTML, CSS y JavaScript sin frameworks, utilizando Fetch API y manejo de promesas para consumir datos en tiempo real.</li>
@@ -213,28 +208,25 @@
                                             <li>Visualización detallada del Pokémon seleccionado, incluyendo tipo, sprite e información básica.</li>
                                             <li>Interfaz optimizada para una navegación ágil y organizada, separando cada tipo de consulta en secciones claras para mejorar la experiencia del usuario.</li>
                                         </ul>
-                                        <a href="https://pokemonsmoves.netlify.app/" target="_blank" rel="noopener noreferrer"><button class="btn">Ver</button></a>
-                                    </div>
-                                </article>
-                                <article class="main__Section__Education__ArticleText__Container__ProyectContent__Carts__item">
-                                    <div class="proyectSection">
-                                        <h2 class="titles">Proyecto diseño</h2>
-                                        <a href="https://leagueloreandmore.netlify.app/" target="_blank" rel="noopener noreferrer"><img src="images/lolProyect.png" class="ProyectImg"></a>
+                        </a>
+                        </article>
+                        <article class="card" style="background-image:url('images/lolProyect.png')">
+                        <a class="proyectSection overlay" href="https://leagueloreandmore.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <h2 class="titles">Proyecto diseño</h2>
                                         <p>Proyecto de maquetación y diseño web inspirado en el universo de League of Legends, enfocado en la experiencia visual y estética.</p>
                                         <ul>
                                             <li>Frontend desarrollado únicamente con HTML y CSS, aplicando diseño responsive para adaptarse a diferentes dispositivos.</li>
                                             <li>Uso de tipografías personalizadas, paleta de colores y recursos visuales del juego para lograr una ambientación inmersiva.</li>
                                             <li>Implementación de efectos y animaciones con CSS transitions y hover effects para dar dinamismo a la navegación.</li>
                                         </ul>
-                                        <a href="https://leagueloreandmore.netlify.app/" target="_blank" rel="noopener noreferrer"><button class="btn">Ver</button></a>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
+                        </a>
+                        </article>
                     </div>
+                    <button class="arrow right">&#8250;</button>
+            </section>
                 </div>
             </section>
-            <section class="main__Section__Education__ArticleText">
+            <section class="main__Section__Education__ArticleText" id="education">
                 <div class="main__Section__Education__ArticleText__Container">
                     <h2 class="titles">Educación</h2>
                     <div class="main__Section__Education__ArticleText__Container__Content">

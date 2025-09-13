@@ -1,10 +1,19 @@
 const mainTitle = document.getElementById('mainTitle');
 const titleProfesionId = document.getElementById('titleProfesionId');
-const titleNameId = document.getElementById('titleNameId')
+const titleNameId = document.getElementById('titleNameId');
+const track = document.querySelector(".carousel-track");
+const cards = document.querySelectorAll(".card");
+const prevBtn = document.querySelector(".arrow.left");
+const nextBtn = document.querySelector(".arrow.right");
+let index = 0;
+let mainTitleBool = true;
+
 window.onload = () => {
     titleLoopChange(mainTitle);
     console.log('hey')
 };
+ window.addEventListener("resize", updatePosition);
+
 const nameNode = document.createElement('h2');
 const nameText = document.createTextNode('Álvaro Rodrigo Acuña Jiménez');
 nameNode.append(nameText);
@@ -14,8 +23,6 @@ profesionNode.append(profesionText);
 const quoteNode = document.createElement('h4');
 const quoteText = document.createTextNode('Disfruto del desarrollo web porque me obliga a pensar diferente: cada proyecto es un rompecabezas y me encanta la satisfacción de encontrar la pieza que encaja, ya sea una función bien optimizada o una interfaz clara.');
 quoteNode.append(quoteText);
-
-let mainTitleBool = true;
 
 const titleLoopChange = (mainTitle) => {
    setInterval(() => {
@@ -46,6 +53,24 @@ const changeNodes = (mainTitle, node, node2 = '') => {
     setTimeout(() => {
       mainTitle.classList.remove('fade-in');
     }, 800);
-},800)
-    
+},800);
 }
+  function updatePosition() {
+     const carouselWidth = document.querySelector(".card").offsetWidth;
+    track.style.transform = `translateX(${-index * carouselWidth}px)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (index < cards.length - 1) {
+      index++;
+      updatePosition();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updatePosition();
+    }
+  });
+ 

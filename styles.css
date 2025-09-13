@@ -17,6 +17,12 @@ h3{
     font-size: 1.8rem;
     font-weight: 900;
 }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    
 
 a,
 a:visited,
@@ -167,6 +173,58 @@ nav{
     align-items: center;
     
 }
+.card {
+      position: relative;
+      flex: 0 0 95dvw;
+      min-height: 50dvh;
+      margin: 0 10px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.822);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .proyectSectionText{
+        background-color: #000000;
+        width: 50%;
+    }
+    .card:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Flechas */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+    .arrow.left { left: 10px; }
+    .arrow.right { right: 10px; }
 .main__Section__Education__ArticleText__Container__Content{
     width: 100%;
     min-height: 30%;
@@ -178,51 +236,16 @@ nav{
     z-index: 10;
 }
 .main__Section__Education__ArticleText__Container__ProyectContent{
-    background-color: #b35700;
+    background-color: #000000;
+    overflow: hidden;
     border-radius: 10px;
     flex-shrink: 0;
     position: relative;
-    aspect-ratio: 1 / 1; 
-    width: 100%;
-    height: 85%;
+    min-width: 100%;
+    max-height: 100%;
     z-index: 10;
 }
-.main__Section__Education__ArticleText__Container__ProyectContent--BgSquare{
-    min-height: 100%;
-    min-width: 100%;
-    width: 100%;
-    background-color: #b35700 ;
-    position: relative;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 10%;
-    z-index: 20;
-}
-.main__Section__Education__ArticleText__Container__ProyectContent__Carts{
-    z-index: 30;
-    min-height: 30dvh;
-    width: 100%;
-    text-align: center;
-    
-}
-.main__Section__Education__ArticleText__Container__ProyectContent__Carts:first-child{
-    padding-top: 50px;
-}
-.main__Section__Education__ArticleText__Container__ProyectContent__Carts:last-child{
-    padding-bottom: 50px;
 
-}
-.main__Section__Education__ArticleText__Container__ProyectContent__Carts__item{
-    width: 95%;
-    min-height: 20dvh;
-    background-color: rgba(0, 0, 0, 0.364);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    z-index: 40;
-}
 .proyectSection{
     text-align: center;
     display: flex;
@@ -324,7 +347,7 @@ nav{
     width: 99%;
     height: 100%;
     border: 2px solid white;
-    overflow: auto;
+    overflow: hidden;
     overflow-y: hidden;
     box-sizing: content-box;
 }
@@ -393,7 +416,7 @@ li::marker{
 .btn{
     width: 300px;
     height: 40px;
-    background-color: rgb(0, 0, 0);
+    background-color: #b35700;
     color: white;
     border: 0px;
     cursor: pointer;
@@ -401,7 +424,8 @@ li::marker{
 }
 .btn:hover{
     height: 50px;
-    background-color: #242424;
+    background-color: #ffffff;
+    color: black;
     transition: 2s;
 }
 
