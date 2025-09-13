@@ -51,8 +51,9 @@ nav{
     background-clip: content-box;
 }
 .main__Section__Presentation__Article__Container--Title{
-    height: 100%;
-    width: 50%;
+    max-height: 250px;
+    min-height: 250px;
+    width: 80%;
     display: flex;
     justify-content: center;
     margin-left: 20px;
@@ -64,6 +65,10 @@ nav{
     margin-top: 60px;
     color: white;
     transition: all linear 1s;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .contactIcon{
     max-width: 50px;
